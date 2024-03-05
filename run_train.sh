@@ -1,0 +1,20 @@
+python 1_train.py --experiments_path /home/mlflow-experiments \
+                  --experiment_name Sentence-Segmentation \
+                  --run_name deberta-v3-xsmall-1 \
+                  --model_path models/best_model \
+                  --script_file sentence_segmentation_dataset.py \
+                  --train_file program_data/train/train_aug.conll \
+                  --validation_file program_data/validation/valid_aug.conll \
+                  --test_file program_data/test/test.conll \
+                  --log_file train.log \
+                  --cache_dir cache_dir \
+                  --pretrained_model_name_or_path microsoft/deberta-v3-xsmall \
+                  --batch_size 16 \
+                  --max_length 256 \
+                  --learning_rate 5e-5 \
+                  --weight_decay 0.0 \
+                  --epochs 10 \
+                  --warmup_ratio 0.0 \
+                  --accum_steps 1 \
+                  --max_norm 1.0 \
+                  --seed 2330

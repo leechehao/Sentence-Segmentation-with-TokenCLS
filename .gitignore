@@ -1,0 +1,6 @@
+__pycache__
+.vscode
+cache_dir
+models
+*_data
+*.log
